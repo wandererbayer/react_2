@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+
+#fundo-preto
+{
+  background-color: black;
+  color: white;
+}
+
+#fundo-branco
+{
+  background-color: white;
+  color: black;
+}
