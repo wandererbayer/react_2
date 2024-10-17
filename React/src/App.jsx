@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
+//import reactLogo from './assets/react.svg'
+//import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -8,6 +8,16 @@ function App() {
   const [string, setString] = useState(false)
   const [theme, setTheme] = useState(true)
   const [balacocaco, setBalaco] = useState(true)
+
+  //https://legacy.reactjs.org/docs/hooks-effect.html
+  //https://react.dev/reference/react/useEffect
+  //https://www.geeksforgeeks.org/reactjs-useeffect-hook/
+  //useEffect() - "lembra" a função que foi passsada (if true = preto / else = branco)
+  //elimina o uso do "?/:" (if/else) no botão da linha 50
+  //Hook tem que colocar na ordem em que aparece, estava embaixo do "if" e não funcionava
+  useEffect(() => { 
+    document.body.className = theme ? 'fundo-preto' : 'fundo-branco';
+  }, [theme]);
 
   if(string == "Senai")
   {
@@ -38,13 +48,6 @@ function App() {
       </div> */}
 
       <button onClick={()=> setTheme(theme ? false : true)}>Mode</button>
-      {theme ?
-        <body id="fundo-preto">
-        </body>
-        :
-        <body id="fundo-branco">
-        </body>
-      }
 
       <button onClick={()=> setBalaco(balacocaco ? false : true)}>Clique</button>
       {balacocaco ?

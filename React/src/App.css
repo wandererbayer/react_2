@@ -41,13 +41,13 @@
   color: #888;
 }
 
-#fundo-preto
+.fundo-preto
 {
   background-color: black;
   color: white;
 }
 
-#fundo-branco
+.fundo-branco
 {
   background-color: white;
   color: black;
