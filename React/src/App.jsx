@@ -8,6 +8,8 @@ function App() {
   const [string, setString] = useState(false)
   const [theme, setTheme] = useState(true)
   const [balacocaco, setBalaco] = useState(true)
+  const [heart, setHeart] = useState(false)
+  const [count2, setCount2] = useState(0)
 
   //https://legacy.reactjs.org/docs/hooks-effect.html
   //https://react.dev/reference/react/useEffect
@@ -74,6 +76,20 @@ function App() {
         <h2>{string}</h2>
         <input type="text" onChange={(e) => setString(e.target.value)}/>
       </div>
+      <div className="card">
+        <button onClick={()=> setHeart(heart ? false : true)}>Like</button>
+          {heart ?
+          <div className="card">
+            <h3>💙{count2 + 1}</h3>
+          </div>
+          :
+          <div className="card">
+            <h3>🖤{count2}</h3>
+          </div>
+        }
+      </div>
+      
+      
         {/* <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p> 
