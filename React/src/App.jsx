@@ -18,6 +18,7 @@ const [postagem4, setPostagem4] = useState(false) //Adicionado para o botão do 
 const [nome, setNome] = useState(false)
 const [email, setEmail] = useState(false)
 const [idade, setIdade] = useState(false)
+const [formDados, setFormDados] = useState([])
 
 //https://legacy.reactjs.org/docs/hooks-effect.html
 //https://react.dev/reference/react/useEffect
@@ -134,6 +135,37 @@ return (
                 <input type="number" onChange={(e) => setIdade(e.target.value)}/>
                 <br /><br />
                 <button onClick={() => setPostagem4(idade)}>Postar Idade</button>
+
+                {/* FORMULÁRIO COM PUSH*/}
+                {/* <h4>Nome: </h4>
+                <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
+                <br /><br />
+                <h4>Email: </h4>
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <br /><br />
+                <h4>Idade: </h4>
+                <input type="number" value={idade} onChange={(e) => setIdade(e.target.value)} />
+                <br /><br />
+                <button onClick={() => {
+                    formDados.push({ nome, email, idade }); // Adiciona diretamente os dados na lista
+                    setFormDados([...formDados]);
+                    setNome(''); setEmail(''); setIdade(''); // Limpa os campos
+                }}>
+                    Postar</button>
+                <br /><br /> */}
+
+                {/* Exibindo os dados */}
+                {/* ??? ao apertar o botão, adiciona uma novos dados na lista(não substitui) ???? */}
+                {/* <div>
+                    <h4>Dados:</h4>
+                    {formDados.map((entry, index) => (
+                    <div key={index}>
+                        <p>Nome: {entry.nome}</p>
+                        <p>Email: {entry.email}</p>
+                        <p>Idade: {entry.idade}</p>
+                    </div>
+                    ))}
+                </div> */}
             </div>
 
             {/* <p>
