@@ -151,11 +151,11 @@ return (
                     setFormDados([...formDados]);
                     setNome(''); setEmail(''); setIdade(''); // Limpa os campos
                 }}>
-                    Postar</button>
-                <br /><br /> */}
+                    Postar</button> */}
+                <br /><br />
 
                 {/* Exibindo os dados */}
-                {/* ??? ao apertar o botão, adiciona uma novos dados na lista(não substitui) ???? */}
+                {/* ??? ao apertar o botão, adiciona novos dados na lista(não substitui) ???? */}
                 {/* <div>
                     <h4>Dados:</h4>
                     {formDados.map((entry, index) => (
