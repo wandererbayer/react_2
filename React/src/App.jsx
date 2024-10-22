@@ -18,13 +18,13 @@ const [postagem4, setPostagem4] = useState(false) //Adicionado para o botão do 
 const [nome, setNome] = useState(false)
 const [email, setEmail] = useState(false)
 const [idade, setIdade] = useState(false)
-const [formDados, setFormDados] = useState([])
+// const [formDados, setFormDados] = useState([])
 
 //https://legacy.reactjs.org/docs/hooks-effect.html
 //https://react.dev/reference/react/useEffect
 //https://www.geeksforgeeks.org/reactjs-useeffect-hook/
 //useEffect() - "lembra" a função que foi passsada (if true = preto / else = branco)
-//elimina o uso do "?/:" (if/else) no botão da linha 50
+//elimina o uso do "?/:" (if/else) no botão da linha 66
 //Hook tem que colocar na ordem em que aparece, estava embaixo do "if" e não funcionava
 useEffect(() => { 
     document.body.className = theme ? 'fundo-preto' : 'fundo-branco';
