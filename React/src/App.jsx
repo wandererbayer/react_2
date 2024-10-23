@@ -15,10 +15,10 @@ const [postagem, setPostagem] = useState(false) //Criado para o botão de Postag
 const [postagem2, setPostagem2] = useState(false) //Adicionado para o botão do Formulário (nome)
 const [postagem3, setPostagem3] = useState(false) //Adicionado para o botão do Formulário (email)
 const [postagem4, setPostagem4] = useState(false) //Adicionado para o botão do Formulário (idade)
-const [nome, setNome] = useState(false)
-const [email, setEmail] = useState(false)
-const [idade, setIdade] = useState(false)
-// const [formDados, setFormDados] = useState([])
+const [nome, setNome] = useState("")
+const [email, setEmail] = useState("")
+const [idade, setIdade] = useState("")
+const [formDados, setFormDados] = useState([])
 
 //https://legacy.reactjs.org/docs/hooks-effect.html
 //https://react.dev/reference/react/useEffect
@@ -121,7 +121,7 @@ return (
             <div className="card">
                 {/* FORMULÁRIO */}
                 {/* Adaptar novas variáveis para o Formulário */}
-                <h4>Nome: {postagem2}</h4>
+                {/* <h4>Nome: {postagem2}</h4>
                 <input type="text" onChange={(e) => setNome(e.target.value)}/>
                 <br /><br />
                 <button onClick={() => setPostagem2(nome)}>Postar Nome</button>
@@ -134,10 +134,10 @@ return (
                 <h4>Idade: {postagem4}</h4>
                 <input type="number" onChange={(e) => setIdade(e.target.value)}/>
                 <br /><br />
-                <button onClick={() => setPostagem4(idade)}>Postar Idade</button>
+                <button onClick={() => setPostagem4(idade)}>Postar Idade</button> */}
 
                 {/* FORMULÁRIO COM PUSH*/}
-                {/* <h4>Nome: </h4>
+                <h4>Nome: </h4>
                 <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
                 <br /><br />
                 <h4>Email: </h4>
@@ -151,21 +151,23 @@ return (
                     setFormDados([...formDados]);
                     setNome(''); setEmail(''); setIdade(''); // Limpa os campos
                 }}>
-                    Postar</button> */}
+                    Postar</button>
                 <br /><br />
 
                 {/* Exibindo os dados */}
                 {/* ??? ao apertar o botão, adiciona novos dados na lista(não substitui) ???? */}
-                {/* <div>
+                <div>
                     <h4>Dados:</h4>
+                    <hr />
                     {formDados.map((entry, index) => (
                     <div key={index}>
                         <p>Nome: {entry.nome}</p>
                         <p>Email: {entry.email}</p>
                         <p>Idade: {entry.idade}</p>
+                        <hr />
                     </div>
                     ))}
-                </div> */}
+                </div>
             </div>
 
             {/* <p>
